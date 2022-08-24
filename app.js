@@ -43,16 +43,18 @@ class Calculator {
         if (isNaN(prev) || isNaN(current)) return
         switch (this.operation) {
             case '+':
-                computation = prev + current
+                computation = (prev + current).toFixed(2)
                 break
             case '-':
-                computation = prev - current
+                computation = (prev - current).toFixed(2)
                 break
             case '*':
-                computation = prev * current
+                computation = (prev * current).toFixed(2)
+                //computation = Math.round(((prev * current)*100)/100)//
                 break
             case '÷':
-                computation = prev / current
+                computation = (prev / current).toFixed(2)
+                //computation = Math.round(((prev / current)*100)/100)//
                 break
             default:
                 return
